@@ -13,6 +13,30 @@ export class HomeComponent implements OnInit {
     private router:Router
   ) { }
 
+
+  List = [10,27,53,84,95,6,77,81,93];
+  
+  objecta = {
+    name: 'karem',
+    id: 1
+  }
+
+  NumberOfList = 0;
+  Avg = 0;
+
+  ShowListCount(event){
+
+    console.log(event);
+
+    this.NumberOfList = event
+    
+  }
+
+  ShowListAvg(event){
+
+    this.Avg = event;
+  }
+
   items:NbMenuItem[] = [
     {
       title: "اضافة طالب",
