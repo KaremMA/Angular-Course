@@ -1,0 +1,26 @@
+.employee-card {
+    width: 500px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid rgb(124, 124, 124);
+
+    border-radius: 5px;
+
+    .employee-data {
+        .title {
+            text-align: right;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+    
+    .employee-address{
+        .title {
+            text-align: right;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}

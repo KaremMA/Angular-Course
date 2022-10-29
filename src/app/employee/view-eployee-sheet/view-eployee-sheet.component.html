@@ -1,0 +1,24 @@
+<h1 class="text-center">بيانات الموظفيين</h1>
+
+<div *ngFor="let e of EmployeeData" class="employee-card mb-3">
+    <div class="employee-data">
+
+        <p class="title">اسم الموظف</p>
+        <input class="form-control text-end" value="{{e.name}}" disabled>
+        <p class="title">رقم هاتف الموظف</p>
+        <input class="form-control text-end" value="{{e.phone}}" disabled>
+        <p class="title">اسم المستخدم</p>
+        <input class="form-control text-end" value="{{e.username}}" disabled>
+        <p class="title">البريد</p>
+        <input class="form-control text-end" value="{{e.email}}" disabled>
+    </div>
+    <hr/>
+    <div class="employee-address">
+        <p class="title">الشارع</p>
+        <input class="form-control text-end" value="{{e.address.street}}" disabled>
+        <p class="title">المدينة</p>
+        <input class="form-control text-end" value="{{e.address.city}}" disabled>
+        <p class="title">ZipCode</p>
+        <input class="form-control text-end" value="{{e.address.zipcode}}" disabled>
+    </div>
+</div>

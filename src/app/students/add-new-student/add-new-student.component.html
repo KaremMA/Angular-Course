@@ -1,0 +1,55 @@
+<nb-card class="h-100">
+  <nb-card-body>
+    <form [formGroup]="StudentForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col">
+          <h3 class="input-title">العنوان</h3>
+          <input nbInput type="text" formControlName="address" placeholder="(اختيارى)" class="input-feaild">
+        </div>
+        <div class="col">
+          <h3 class="input-title">رقم القيد</h3>
+          <input  [class.invalid]="StudentForm.get('roullNumber').invalid && StudentForm.get('roullNumber').touched" type="text" formControlName="roullNumber" nbInput class="input-feaild">
+          <small *ngIf="StudentForm.get('roullNumber').invalid && StudentForm.get('roullNumber').touched">Feaild Is Required</small>
+          
+        </div>
+        <div class="col">
+          <h3 class="input-title">اسم الطالب</h3>
+          <input  
+          [class.invalid]="StudentForm.get('fullname').invalid && StudentForm.get('fullname').touched"
+          type="text" formControlName="fullname" nbInput class="input-feaild">
+          <small *ngIf="StudentForm.get('fullname').invalid && StudentForm.get('fullname').touched">Feaild Is Required</small>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h3 class="input-title">رقم الهاتف</h3>
+          <input type="text" formControlName="phoneNumber" placeholder="(اختيارى)" nbInput class="input-feaild">
+        </div>
+        <div class="col">
+          <h3 class="input-title">التخصص</h3>
+          <input 
+          [class.invalid]="StudentForm.get('program').invalid && StudentForm.get('program').touched"
+          nbInput type="text" formControlName="program" class="input-feaild">
+          <small *ngIf="StudentForm.get('program').invalid && StudentForm.get('program').touched">Feaild Is Required</small>
+
+        </div>
+        <div class="col">
+          <h3 class="input-title">الكلية</h3>
+          <input 
+          [class.invalid]="StudentForm.get('college').invalid && StudentForm.get('college').touched"
+          nbInput type="text" formControlName="college" class="input-feaild">
+          <small *ngIf="StudentForm.get('college').invalid && StudentForm.get('college').touched">Feaild Is Required</small>
+
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col">
+          <button size="small" type="submit" nbButton status="primary">حفظ</button>
+        </div>
+      </div>
+    </form>
+
+  </nb-card-body>
+</nb-card>

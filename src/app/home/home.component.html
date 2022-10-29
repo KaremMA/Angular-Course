@@ -1,0 +1,51 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home/students/add-new-student">إضافة طالب جديد</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home/students/student-subject">عرض مواد الطلبة</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home/employee/add-new-employee">إضافة موظف جديد</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home/employee/view-eployee-sheet">عرض ملف الموظفين</a>
+            </li>
+            <li class="nav-item">
+                <button (click)="AddNewEmployee()" class="btn btn-success">موظف جديد</button>
+            </li>
+            <li class="nav-item">
+                <button (click)="UpdateEmployee(10, 123456)" class="btn btn-primary">تعديل موظف</button>
+            </li>
+        </ul>
+
+    </div>
+</nav> -->
+
+<nb-layout>
+
+    <nb-layout-header fixed>
+        <!-- Insert header here -->
+    </nb-layout-header>
+
+
+    <nb-sidebar right>
+        <nb-menu [items]="items">
+        </nb-menu>
+    </nb-sidebar>
+
+
+
+    <nb-layout-column>
+        <router-outlet></router-outlet>
+    </nb-layout-column>
+
+</nb-layout>
